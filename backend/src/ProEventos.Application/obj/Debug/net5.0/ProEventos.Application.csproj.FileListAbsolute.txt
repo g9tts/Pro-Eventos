@@ -1,0 +1,17 @@
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Application.deps.json
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Application.dll
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ref\ProEventos.Application.dll
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Application.pdb
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.csproj.AssemblyReference.cache
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.AssemblyInfoInputs.cache
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.AssemblyInfo.cs
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.csproj.CoreCompileInputs.cache
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.dll
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ref\ProEventos.Application.dll
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.pdb
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Domain.dll
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Persistence.dll
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Domain.pdb
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\bin\Debug\net5.0\ProEventos.Persistence.pdb
+C:\Users\rreisc\Documents\Projetos\ProEventos\backend\src\ProEventos.Application\obj\Debug\net5.0\ProEventos.Application.csproj.CopyComplete
