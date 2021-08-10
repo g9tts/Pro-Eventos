@@ -15,7 +15,6 @@ import { EventoService } from '../../services/evento.service';
 })
 export class EventosComponent implements OnInit {
 
-  modalRef : BsModalRef
   public eventos: Evento[] = [];
   public filteredEvents: Evento[] = [];
 
@@ -44,6 +43,7 @@ export class EventosComponent implements OnInit {
   constructor(
     private eventoService: EventoService,
     private modalService: BsModalService,
+    private modalRef : BsModalRef,
     private toastr: ToastrService,
     private spinner: NgxSpinnerService,
     ) { }
