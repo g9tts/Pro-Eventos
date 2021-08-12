@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\ProEventos.API\\ProEventos.API.csproj": {}
+    "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\Proeventos.API\\ProEventos.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\ProEventos.API\\ProEventos.API.csproj": {
+    "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\Proeventos.API\\ProEventos.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectUniqueName": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\Proeventos.API\\ProEventos.API.csproj",
         "projectName": "ProEventos.API",
-        "projectPath": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\ProEventos.API\\ProEventos.API.csproj",
+        "projectPath": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\Proeventos.API\\ProEventos.API.csproj",
         "packagesPath": "C:\\Users\\rreisc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\ProEventos.API\\obj\\",
+        "outputPath": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\Proeventos.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rreisc\\AppData\\Roaming\\NuGet\\NuGet.Config",

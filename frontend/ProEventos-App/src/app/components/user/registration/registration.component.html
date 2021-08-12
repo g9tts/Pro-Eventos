@@ -75,8 +75,11 @@
           formControlName="password"
           [ngClass]="{'is-invalid': f.password.errors && f.password.touched}"
           placeholder="Digite uma Senha" />
-          <div class="invalid-feedback">
+          <div *ngIf="f.password.errors?.required && f.password.touched" class="invalid-feedback">
             Senha é obrigatorio
+          </div>
+          <div *ngIf="f.password.errors?.minlength && f.password.touched" class="invalid-feedback">
+            Deve conter no mínimo 6 caractres.
           </div>
         </div>
 
@@ -87,8 +90,11 @@
           formControlName="passwordConfirm"
           [ngClass]="{'is-invalid': f.passwordConfirm.errors && f.passwordConfirm.touched}"
           placeholder="Confirme a Senha" />
-          <div class="invalid-feedback">
+          <div *ngIf="f.passwordConfirm.errors?.required" class="invalid-feedback">
             Confirmar a senha é obrigatorio
+          </div>
+          <div *ngIf="f.passwordConfirm.errors?.mustMatch" class="invalid-feedback">
+            Repetir a senha é obrigatorio
           </div>
         </div>
       </div>
