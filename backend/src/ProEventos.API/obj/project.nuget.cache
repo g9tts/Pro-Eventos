@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/CN/e1FvuYoHgwvHHT1iGQKPyTdBWJhOk9o15GzsYc1TLTijVTpFckAv8B7akLD2VLtZpFFrj7t7bKOcQqg61A==",
+  "dgSpecHash": "LjA4T1+mjW5uuoyx8yiw1cJYmyYC8y+a08t7ETsF28m1u7qDDP8lGs48yJRZ5QZ7HSvUJw7xK8pVOm/UDCZfuQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\Proeventos.API\\ProEventos.API.csproj",
+  "projectFilePath": "C:\\Users\\rreisc\\Documents\\Projetos\\ProEventos\\backend\\src\\ProEventos.API\\ProEventos.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\rreisc\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\rreisc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\rreisc\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rreisc\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.8\\microsoft.aspnetcore.jsonpatch.5.0.8.nupkg.sha512",
     "C:\\Users\\rreisc\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.8\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.8.nupkg.sha512",
@@ -43,7 +45,8 @@
     "C:\\Users\\rreisc\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\rreisc\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\rreisc\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\rreisc\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\rreisc\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\rreisc\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
