@@ -50,34 +50,39 @@ namespace ProEventos.Application
         {
             try
             {
+
                 var lotes = await _lotePersist.GetLotesByEventoIdAsync(eventoId);
                 if (lotes == null) return null;
 
                 foreach (var model in models)
                 {
-                    if (model.Id == 0)
+                    if(model.Id == 0)
                     {
+
                         await AddLote(eventoId, model);
+
                     }
                     else
                     {
                         var lote = lotes.FirstOrDefault(lote => lote.Id == model.Id);
-                        model.EventoId = eventoId;
+                            model.EventoId = eventoId;
 
-                        _mapper.Map(model, lote);
+                            _mapper.Map(model, lote);
 
-                        _geralPersist.Update<Lote>(lote);
-
-                        await _geralPersist.SaveChangesAsync();
+                            _geralPersist.Update<Lote>(lote);
+                            
+                            await _geralPersist.SaveChangesAsync();
                     }
                 }
 
-                var loteRetorno = await _lotePersist.GetLotesByEventoIdAsync(eventoId);
+                    var loteRetorno = await _lotePersist.GetLotesByEventoIdAsync(eventoId);
+                    
+                    return _mapper.Map<LoteDto[]>(loteRetorno);
 
-                return _mapper.Map<LoteDto[]>(loteRetorno);
             }
             catch (Exception ex)
             {
+
                 throw new Exception(ex.Message);
             }
         }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Evento } from '@app/models/Evento';
+import { Lote } from '@app/models/Lote';
 import { EventoService } from '@app/services/evento.service';
 import { BsLocaleService } from 'ngx-bootstrap/datepicker';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -17,6 +18,10 @@ export class EventoDetalheComponent implements OnInit {
   evento = {} as Evento;
   form: FormGroup;
   estadoSalvar = 'post';
+
+  get lotes(): FormArray {
+    return this.form.get('lotes') as FormArray;
+  }
 
   get f(): any {
     return this.form.controls;
@@ -74,26 +79,39 @@ export class EventoDetalheComponent implements OnInit {
     this.form = this.fb.group({
 
       tema: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
-
       local: ['', Validators.required],
-
       dataEvento: ['', Validators.required],
-
       qtdPessoas: ['', [Validators.required, Validators.max(120000)]],
-
       telefone: ['', Validators.required],
-
       email: ['', [Validators.required, Validators.email]],
+      imagemURL: ['', Validators.required],
+      lotes: this.fb.array([])
 
-      imagemURL: ['', Validators.required]
     });
+  }
+
+  adicionarLote(): void{
+    this.lotes.push(this.criarLote({Id: 0} as Lote));
+  }
+
+  criarLote(lote: Lote): FormGroup {
+    return this.fb.group({
+
+      Id: [lote.Id],
+      nome: [lote.nome, Validators.required],
+      Quantidade: [lote.Quantidade, Validators.required],
+      Preco: [lote.Preco, Validators.required],
+      DataInicio: [lote.DataInicio],
+      DataFim: [lote.DataFim]
+
+     })
   }
 
   public resetForm(): void {
     this.form.reset();
   }
 
-  public cssValidator(campoForm: FormControl): any{
+  public cssValidator(campoForm: FormControl | AbstractControl): any{
     return {'is-invalid': campoForm?.errors && campoForm?.touched}
   }
 

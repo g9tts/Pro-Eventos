@@ -34,6 +34,7 @@ import { EventoListaComponent } from './components/eventos/evento-lista/evento-l
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegistrationComponent } from './components/user/registration/registration.component';
+import { LoteService } from './services/lote.service';
 
 defineLocale('pt-br', ptBrLocale);
 
@@ -74,7 +75,9 @@ defineLocale('pt-br', ptBrLocale);
     }),
     NgxSpinnerModule
   ],
-  providers: [EventoService, BsModalRef],
+  providers: [EventoService,
+              LoteService,
+              BsModalRef],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
