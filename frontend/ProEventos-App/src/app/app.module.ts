@@ -77,7 +77,7 @@ defineLocale('pt-br', ptBrLocale);
     NgxCurrencyModule,
     NgxSpinnerModule
   ],
-  providers: [EventoService,
+  providers: [EventoService, BsModalRef,
               LoteService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

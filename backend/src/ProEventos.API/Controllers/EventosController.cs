@@ -1,13 +1,12 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProEventos.Application.Contratos;
+using Microsoft.AspNetCore.Http;
 using ProEventos.Application.Dtos;
-
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using System.Linq;
 
 namespace ProEventos.API.Controllers
 {
@@ -36,11 +35,9 @@ namespace ProEventos.API.Controllers
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar recuperar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar recuperar eventos. Erro: {ex.Message}");
             }
-
         }
 
         [HttpGet("{id}")]
@@ -55,11 +52,9 @@ namespace ProEventos.API.Controllers
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar recuperar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar recuperar eventos. Erro: {ex.Message}");
             }
-
         }
 
         [HttpGet("{tema}/tema")]
@@ -74,11 +69,9 @@ namespace ProEventos.API.Controllers
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar recuperar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar recuperar eventos. Erro: {ex.Message}");
             }
-
         }
 
         [HttpPost("upload-image/{eventoId}")]
@@ -92,20 +85,17 @@ namespace ProEventos.API.Controllers
                 var file = Request.Form.Files[0];
                 if (file.Length > 0)
                 {
-
                     DeleteImage(evento.ImagemURL);
-                     evento.ImagemURL = await SaveImage(file);
+                    evento.ImagemURL = await SaveImage(file);
                 }
-
                 var EventoRetorno = await _eventoService.UpdateEvento(eventoId, evento);
 
                 return Ok(EventoRetorno);
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar adicionar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar adicionar eventos. Erro: {ex.Message}");
             }
         }
 
@@ -121,9 +111,8 @@ namespace ProEventos.API.Controllers
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar adicionar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar adicionar eventos. Erro: {ex.Message}");
             }
         }
 
@@ -139,9 +128,8 @@ namespace ProEventos.API.Controllers
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar atualizar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar atualizar eventos. Erro: {ex.Message}");
             }
         }
 
@@ -153,16 +141,20 @@ namespace ProEventos.API.Controllers
                 var evento = await _eventoService.GetEventoByIdAsync(id, true);
                 if (evento == null) return NoContent();
 
-                return await _eventoService.DeleteEvento(id)
-                ? Ok(new { message = "Deletado " })
-                : throw new Exception("Ocorreu um problema nao especifico ao tentar deletar evento.");
-
+                if (await _eventoService.DeleteEvento(id))
+                {
+                    DeleteImage(evento.ImagemURL);
+                    return Ok(new { message = "Deletado" });
+                }
+                else
+                {
+                    throw new Exception("Ocorreu um problem não específico ao tentar deletar Evento.");
+                }
             }
             catch (Exception ex)
             {
-
                 return this.StatusCode(StatusCodes.Status500InternalServerError,
-                $"Erro ao tentar deletar eventos! Erro: {ex.Message}");
+                    $"Erro ao tentar deletar eventos. Erro: {ex.Message}");
             }
         }
 
@@ -185,14 +177,13 @@ namespace ProEventos.API.Controllers
 
             return imageName;
         }
-        
+
         [NonAction]
         public void DeleteImage(string imageName)
         {
             var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, @"Resources/images", imageName);
             if (System.IO.File.Exists(imagePath))
-                System.IO.File.Delete(imageName);
+                System.IO.File.Delete(imagePath);
         }
-
     }
 }
